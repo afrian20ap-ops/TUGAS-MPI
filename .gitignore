@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+frontend/dist/
+*.exe
+
+# Environment & secrets
+backend/.env
+.env
+.env.local
+
+# Tooling cache & OS files
+.hallmark/
+.DS_Store
+Thumbs.db
+*.log

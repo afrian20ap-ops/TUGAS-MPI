@@ -1,0 +1,52 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      colors: {
+        paper: 'var(--color-paper)',
+        'paper-2': 'var(--color-paper-2)',
+        'paper-3': 'var(--color-paper-3)',
+        surface: 'var(--color-surface)',
+        chrome: 'var(--color-chrome)',
+        ink: 'var(--color-ink)',
+        'ink-2': 'var(--color-ink-2)',
+        muted: 'var(--color-muted)',
+        rule: 'var(--color-rule)',
+        'rule-2': 'var(--color-rule-2)',
+        accent: 'var(--color-accent)',
+        'accent-deep': 'var(--color-accent-deep)',
+        'accent-ink': 'var(--color-accent-ink)',
+        'accent-soft': 'var(--color-accent-soft)',
+        'accent-soft-ink': 'var(--color-accent-soft-ink)',
+        focus: 'var(--color-focus)',
+        rail: 'var(--color-rail)',
+        'rail-2': 'var(--color-rail-2)',
+        'rail-rule': 'var(--color-rail-rule)',
+        'rail-ink': 'var(--color-rail-ink)',
+        'rail-muted': 'var(--color-rail-muted)',
+        error: 'var(--color-error)',
+        'error-soft': 'var(--color-error-soft)',
+        'error-soft-ink': 'var(--color-error-soft-ink)',
+        success: 'var(--color-success)',
+        'warn-soft': 'var(--color-warn-soft)',
+        'warn-soft-ink': 'var(--color-warn-soft-ink)',
+      },
+      fontFamily: {
+        display: ['var(--font-display)'],
+        sans: ['var(--font-body)'],
+        mono: ['var(--font-outlier)'],
+      },
+      borderRadius: {
+        card: 'var(--radius-card)',
+        control: 'var(--radius-control)',
+        pill: 'var(--radius-pill)',
+      },
+      boxShadow: {
+        card: 'var(--shadow-card)',
+        lift: 'var(--shadow-lift)',
+      },
+    },
+  },
+  plugins: [],
+}

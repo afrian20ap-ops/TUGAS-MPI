@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 4.8vw + 0.9rem, 4.75rem);
+  --text-section: clamp(1.9rem, 2.3vw + 0.85rem, 3rem); --text-title: clamp(1.2rem, 0.7vw + 0.875rem, 1.5rem); --text-lead: clamp(1.0625rem, 0.35vw + 0.95rem, 1.25rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --container: 1400px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* Dose Modern Civic Palette (OKLCH) */
+  --color-paper: oklch(97.6% 0.008 155);
+  --color-paper-2: oklch(95.4% 0.014 158);
+  --color-paper-3: oklch(92.4% 0.02 160);
+  --color-surface: oklch(99.6% 0.004 155);
+  --color-chrome: oklch(98.5% 0.007 155 / 0.86);
+
+  --color-ink: oklch(20% 0.024 168);
+  --color-ink-2: oklch(33% 0.02 168);
+  --color-muted: oklch(47% 0.02 165);
+  --color-rule: oklch(88% 0.015 158);
+  --color-rule-2: oklch(92% 0.012 158);
+
+  --color-accent: oklch(49% 0.128 160);
+  --color-accent-deep: oklch(41% 0.112 162);
+  --color-accent-soft: oklch(91% 0.055 160);
+  --color-accent-soft-ink: oklch(26% 0.065 162);
+  --color-accent-ink: oklch(99% 0.006 160);
+  --color-focus: oklch(46% 0.135 160);
+
+  /* Dark Executive Forest Band & Admin Rail */
+  --color-rail: oklch(18% 0.026 168);
+  --color-rail-2: oklch(23% 0.03 166);
+  --color-rail-rule: oklch(29% 0.026 166);
+  --color-rail-ink: oklch(97% 0.008 155);
+  --color-rail-muted: oklch(76% 0.02 160);
+
+  /* Semantic Status */
+  --color-error: oklch(52% 0.18 27);
+  --color-error-soft: oklch(94.5% 0.038 27);
+  --color-error-soft-ink: oklch(34% 0.13 27);
+  --color-success: oklch(49% 0.128 160);
+  --color-warn-soft: oklch(94.5% 0.05 82);
+  --color-warn-soft-ink: oklch(34% 0.085 72);
+
+  --glint: oklch(99.8% 0.003 155);
+  --color-glare: oklch(99.8% 0.008 160 / 0.24);
+  --overlay-scrim: oklch(16% 0.02 168 / 0.5);
+
+  /* Typography */
+  --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "DM Mono", ui-monospace, monospace;
+
+  /* Geometry & Elevation */
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --shadow-card: 0 1px 2px oklch(22% 0.03 165 / 0.06), 0 12px 28px -16px oklch(24% 0.05 165 / 0.18);
+  --shadow-lift: 0 2px 6px oklch(22% 0.03 165 / 0.08), 0 22px 44px -20px oklch(24% 0.06 165 / 0.24);
+  --shadow-btn: 0 1px 2px oklch(22% 0.03 165 / 0.08), inset 0 1px 0 oklch(99.8% 0.003 155 / 0.8);
+  --shadow-btn-primary: 0 1px 2px oklch(22% 0.06 162 / 0.24), 0 8px 18px -8px oklch(38% 0.12 162 / 0.45), inset 0 1px 0 oklch(99% 0.01 160 / 0.25);
+
+  --tracking-display: -0.03em;
+  --display-weight: 700;
+}
