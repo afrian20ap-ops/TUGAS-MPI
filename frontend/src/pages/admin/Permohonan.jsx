@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Download, FileDown, Paperclip, X } from 'lucide-react'
-import api from '../../services/api'
+import api, { assetUrl } from '../../services/api'
 import AdminLayout from '../../components/AdminLayout'
 import { useAuth } from '../../context/AuthContext'
 
@@ -355,7 +355,7 @@ export default function AdminPermohonan() {
                         <Paperclip size={13} aria-hidden="true" className="text-muted" />
                         {label}
                       </span>
-                      <a href={`http://localhost:8080/${file}`} target="_blank" rel="noreferrer" className="text-xs civic-link">
+                      <a href={assetUrl(file)} target="_blank" rel="noreferrer" className="text-xs civic-link">
                         Lihat dokumen
                       </a>
                     </div>
@@ -366,7 +366,7 @@ export default function AdminPermohonan() {
               {selected.file_hasil && (
                 <div className="notice notice-in flex items-center justify-between">
                   <span className="text-xs font-semibold">File hasil sebelumnya</span>
-                  <a href={`http://localhost:8080/${selected.file_hasil}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs civic-link">
+                  <a href={assetUrl(selected.file_hasil)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs civic-link">
                     <Download size={13} aria-hidden="true" />
                     <span>Lihat hasil</span>
                   </a>

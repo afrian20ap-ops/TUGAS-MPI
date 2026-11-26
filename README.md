@@ -217,6 +217,15 @@ Frontend dapat diakses melalui `http://localhost:5173`.
 
 ---
 
+## Hosting Gratis (Cloud)
+
+Aplikasi ini sudah dilengkapi konfigurasi siap deploy gratis tanpa kartu kredit (**TiDB Cloud Serverless** + **Render** + **Vercel**):
+- Konfigurasi backend: `backend/Dockerfile`, `render.yaml`, serta dukungan `DB_TLS` pada `backend/config/database.go`.
+- Konfigurasi frontend: `frontend/vercel.json`, `frontend/.env.example`, dan URL API dinamis berbasis `VITE_API_URL`.
+- Panduan lengkap langkah demi langkah tersedia di [`DEPLOY.md`](./DEPLOY.md).
+
+---
+
 ## Audit Kepatuhan Cyberlaw & Etika Profesi
 
 Repositori ini juga menyertakan dokumen hasil audit kepatuhan aplikasi terhadap **UU ITE**, **UU PDP (UU No. 27 Tahun 2022)**, dan **ACM Code of Ethics (2018)**:

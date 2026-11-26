@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polygon, Marker, useMapEvents } from 'react-le
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import { ArrowLeft, Calendar, ChevronRight, MapPin, Paperclip, Plus, Trash2, X } from 'lucide-react'
-import api from '../../services/api'
+import api, { assetUrl } from '../../services/api'
 import UserLayout from '../../components/UserLayout'
 import { Reveal3D, Tilt3D } from '../../components/Motion3D'
 
@@ -407,7 +407,7 @@ export default function UserAspirasi() {
 
               {selected.foto && (
                 <img
-                  src={`http://localhost:8080/${selected.foto}`}
+                  src={assetUrl(selected.foto)}
                   alt="Foto pendukung aspirasi"
                   className="civic-photo w-full object-cover max-h-56"
                 />
@@ -429,7 +429,7 @@ export default function UserAspirasi() {
                         {[t.file_bukti, t.file_bukti_2, t.file_bukti_3].filter(Boolean).map((f, idx) => (
                           <a
                             key={idx}
-                            href={`http://localhost:8080/${f}`}
+                            href={assetUrl(f)}
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center gap-1.5 text-xs civic-link mr-4 pt-1"

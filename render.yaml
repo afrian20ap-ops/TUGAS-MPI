@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: sipla-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "4000"
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        value: pengaduan_masyarakat3
+      - key: DB_TLS
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GIN_MODE
+        value: release

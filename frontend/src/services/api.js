@@ -1,8 +1,14 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8080/api' // Jika jalan untuk laptop sendiri uncomment url ini.
+const rawBackendUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8080').replace(/\/+$/, '')
+export const BACKEND_URL = rawBackendUrl.replace(/\/api$/, '')
+export const API_URL = `${BACKEND_URL}/api`
 
-// const API_URL = 'http://192.168.1.5:8080/api' // IP Laptop atau IP Server agar bisa diakses dari laptop lain di jaringan yang sama
+export const assetUrl = (path) => {
+  if (!path) return ''
+  if (/^https?:\/\//i.test(path)) return path
+  return `${BACKEND_URL}/${String(path).replace(/^\/+/, '')}`
+}
 
 const api = axios.create({ baseURL: API_URL })
 

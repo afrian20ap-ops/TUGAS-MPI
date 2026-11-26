@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import api from '../../services/api'
+import api, { assetUrl } from '../../services/api'
 import UserLayout from '../../components/UserLayout'
 
 const statusBadge = (status) => {
@@ -185,7 +185,7 @@ export default function UserPengaduan() {
               <p><span className="text-gray-500">Lokasi:</span> {selected.lokasi_kejadian}</p>
               <p><span className="text-gray-500">Tgl Kejadian:</span> {new Date(selected.tgl_kejadian).toLocaleDateString('id-ID')}</p>
               {selected.foto && (
-                <img src={`http://localhost:8080/${selected.foto}`} alt="foto" className="rounded-lg max-h-48 w-full object-cover" />
+                <img src={assetUrl(selected.foto)} alt="foto" className="rounded-lg max-h-48 w-full object-cover" />
               )}
 
               {selected.tanggapan?.length > 0 && (

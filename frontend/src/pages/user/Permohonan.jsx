@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowLeft, ChevronRight, Download, Paperclip, Plus, X } from 'lucide-react'
-import api from '../../services/api'
+import api, { assetUrl } from '../../services/api'
 import UserLayout from '../../components/UserLayout'
 import { Reveal3D, Tilt3D } from '../../components/Motion3D'
 
@@ -184,7 +184,7 @@ export default function UserPermohonan() {
                   )}
                   {p.file_hasil && (
                     <a
-                      href={`http://localhost:8080/${p.file_hasil}`}
+                      href={assetUrl(p.file_hasil)}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs civic-link"
@@ -369,7 +369,7 @@ export default function UserPermohonan() {
                 <div className="notice notice-in flex items-center justify-between">
                   <span className="font-semibold text-xs">Dokumen hasil tersedia</span>
                   <a
-                    href={`http://localhost:8080/${selected.file_hasil}`}
+                    href={assetUrl(selected.file_hasil)}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs civic-link"
@@ -396,7 +396,7 @@ export default function UserPermohonan() {
                         {l}
                       </span>
                       <a
-                        href={`http://localhost:8080/${f}`}
+                        href={assetUrl(f)}
                         target="_blank"
                         rel="noreferrer"
                         className="text-xs civic-link"

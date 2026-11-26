@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { FileDown, MapPin, Paperclip, Trash2, X } from 'lucide-react'
-import api from '../../services/api'
+import api, { assetUrl } from '../../services/api'
 import AdminLayout from '../../components/AdminLayout'
 import { useAuth } from '../../context/AuthContext'
 
@@ -386,7 +386,7 @@ export default function AdminAspirasi() {
 
               {selected.foto && (
                 <img
-                  src={`http://localhost:8080/${selected.foto}`}
+                  src={assetUrl(selected.foto)}
                   alt="Foto aspirasi"
                   className="civic-photo max-h-56 w-full object-cover"
                 />
@@ -407,7 +407,7 @@ export default function AdminAspirasi() {
                         <p className="text-ink-2">{t.tanggapan}</p>
                         <div className="flex flex-wrap gap-3 pt-1">
                           {[t.file_bukti, t.file_bukti_2, t.file_bukti_3].filter(Boolean).map((f, i) => (
-                            <a key={i} href={`http://localhost:8080/${f}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs civic-link">
+                            <a key={i} href={assetUrl(f)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs civic-link">
                               <Paperclip size={12} aria-hidden="true" />
                               <span>Bukti {i + 1}</span>
                             </a>
